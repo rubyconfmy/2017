@@ -29,7 +29,7 @@ jQuery(window).load(function() {
     //frames per second
     this.fps = 60;
     //number of particles
-    this.numParticles = 35;
+    this.numParticles = 50;
     //required canvas variables
     this.canvas = document.getElementById('overlay-canvas');
     this.ctx = this.canvas.getContext('2d');
@@ -196,6 +196,9 @@ jQuery(window).load(function() {
 
 
   // go go go!
-  var particle = new Particles().init();
+  setTimeout(function(){
+    var particle = new Particles().init();
+  }, 500)
+
 })();
 });
