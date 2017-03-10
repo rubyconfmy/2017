@@ -19,13 +19,13 @@ jQuery(window).load(function() {
     this.border = false;
     //particle radius min/max
     this.minRadius = 10;
-    this.maxRadius = 55;
+    this.maxRadius = 60;
     //particle opacity min/max
     this.minOpacity = .005;
-    this.maxOpacity = .5;
+    this.maxOpacity = .3;
     //particle speed min/max
     this.minSpeed = .05;
-    this.maxSpeed = .5;
+    this.maxSpeed = .4;
     //frames per second
     this.fps = 60;
     //number of particles
@@ -42,6 +42,7 @@ jQuery(window).load(function() {
   Particles.prototype.init = function(){
     this.render();
     this.createCircle();
+    this.handleResize();
   }
 
   /**
@@ -66,9 +67,12 @@ jQuery(window).load(function() {
 
     self.canvas.width = wWidth;
     self.canvas.height = wHeight;
+  }
 
+  Particles.prototype.handleResize = function(){
+    var self = this;
     jQuery(window).on('resize', function(){
-      self.render.apply(self)
+      self.render.apply(self);
     });
   }
 
