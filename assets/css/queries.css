@@ -36,7 +36,7 @@
 /*
 .d-sch {
     background: url("../img/dicn.png") no-repeat scroll right 30px top 28px rgba(0, 0, 0, 0);
-   
+
 }
 .fb {
     background: url("../img/fbicn.png") no-repeat scroll left 30px top 27px rgba(0, 0, 0, 0);
@@ -149,7 +149,7 @@ body {
 .btn-effect-send:after {
 	display:none;
 }
-.btn-effect:hover:after, 
+.btn-effect:hover:after,
 .btn-effect:active:after {
 	display:none;
 }
@@ -184,7 +184,7 @@ body {
 float: none;
 }
 .header.header-hide {
-	background: none repeat scroll 0 0 #0f1726;
+	background: none repeat scroll 0 0 transparent;
 }
 .navbar-header {
 	float: none;
@@ -253,7 +253,7 @@ display:none;
 }
 
 .header.header-hide {
-    background: none repeat scroll 0 0 #0f1726;
+    background: none repeat scroll 0 0 transparent;
 }
 
 /* Schedule social links */
@@ -387,7 +387,7 @@ body {
 #get_directions.learn-more-btn{
 	padding: 15px;
 	width: 200px;
-} 
+}
 .sp-dsc blockquote {
 	margin:5px 0;
 }
@@ -457,7 +457,7 @@ blockquote p {
 @media screen and (max-width:585px){
 .md-content{
 	height: 360px;
-   
+
 }
 .folio{
 	 height: 360px;

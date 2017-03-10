@@ -1,128 +1,197 @@
 jQuery(window).load(function() {
 (function() {
+  /**
+   * Generates random particles using canvas
+   *
+   * @class Particles
+   * @constructor
+   */
+  function Particles(){
+    //particle colors
+    this.colors = [
+      '255, 255, 255',
+      '255, 99, 71',
+      '19, 19, 19'
+    ]
+    //adds gradient to particles on true
+    this.blurry = true;
+    //adds white border
+    this.border = false;
+    //particle radius min/max
+    this.minRadius = 10;
+    this.maxRadius = 55;
+    //particle opacity min/max
+    this.minOpacity = .005;
+    this.maxOpacity = .5;
+    //particle speed min/max
+    this.minSpeed = .05;
+    this.maxSpeed = .5;
+    //frames per second
+    this.fps = 60;
+    //number of particles
+    this.numParticles = 35;
+    //required canvas variables
+    this.canvas = document.getElementById('overlay-canvas');
+    this.ctx = this.canvas.getContext('2d');
+  }
 
-    var width, height, largeHeader, canvas, ctx, triangles, target, animateHeader = true;
-    var colors = ['204,20,20', '204,50,50', '204,100,100', '204,150,150', '204,200,200'];
+  /**
+   * Initializes everything
+   * @method init
+   */
+  Particles.prototype.init = function(){
+    this.render();
+    this.createCircle();
+  }
 
-    // Main
-    initHeader();
-    addListeners();
-    initAnimation();
+  /**
+   * generates random number between min and max values
+   * @param  {number} min value
+   * @param  {number} max malue
+   * @return {number} random number between min and max
+   * @method _rand
+   */
+  Particles.prototype._rand = function(min, max){
+    return Math.random() * (max - min) + min;
+  }
 
-    function initHeader() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        target = {x: 0, y: height};
+  /**
+   * Sets canvas size and updates values on resize
+   * @method render
+   */
+  Particles.prototype.render = function(){
+    var self = this,
+        wHeight = jQuery(window).height(),
+        wWidth = jQuery(window).width();
 
-        largeHeader = document.getElementById('top');
-        largeHeader.style.minHeight = height+'px';
+    self.canvas.width = wWidth;
+    self.canvas.height = wHeight;
 
-        canvas = document.getElementById('demo-canvas');
-        canvas.width = width;
-        canvas.height = height;
-        ctx = canvas.getContext('2d');
+    jQuery(window).on('resize', function(){
+      self.render.apply(self)
+    });
+  }
 
-        // create particles
-        triangles = [];
-        for(var x = 0; x < 300; x++) {
-            addTriangle(x*30);
+  /**
+   * Randomly creates particle attributes
+   * @method createCircle
+   */
+  Particles.prototype.createCircle = function(){
+    var particle = [];
+
+    for (var i = 0; i < this.numParticles; i++) {
+      var self = this,
+          color = self.colors[~~(self._rand(0, self.colors.length))];
+
+      particle[i] = {
+        radius    : self._rand(self.minRadius, self.maxRadius),
+        xPos      : self._rand(0, self.canvas.width),
+        yPos      : self._rand(0, self.canvas.height),
+        xVelocity : self._rand(self.minSpeed, self.maxSpeed),
+        yVelocity : self._rand(self.minSpeed, self.maxSpeed),
+        color     : 'rgba(' + color + ',' + self._rand(self.minOpacity, self.maxOpacity) + ')'
+      }
+
+      //once values are determined, draw particle on canvas
+      self.draw(particle, i);
+    }
+    //...and once drawn, animate the particle
+    self.animate(particle);
+  }
+
+  /**
+   * Draws particles on canvas
+   * @param  {array} Particle array from createCircle method
+   * @param  {number} i value from createCircle method
+   * @method draw
+   */
+  Particles.prototype.draw = function(particle, i){
+    var self = this,
+        ctx = self.ctx;
+
+    if (self.blurry === true ) {
+      //creates gradient if blurry === true
+      var grd = ctx.createRadialGradient(particle[i].xPos, particle[i].yPos, particle[i].radius, particle[i].xPos, particle[i].yPos, particle[i].radius/1.25);
+
+      grd.addColorStop(1.000, particle[i].color);
+      grd.addColorStop(0.000, 'rgba(34, 34, 34, 0)');
+      ctx.fillStyle = grd;
+    } else {
+      //otherwise sets to solid color w/ opacity value
+      ctx.fillStyle = particle[i].color;
+    }
+
+    if (self.border === true) {
+      ctx.strokeStyle = '#fff';
+      ctx.stroke();
+    }
+
+    ctx.beginPath();
+    ctx.arc(particle[i].xPos, particle[i].yPos, particle[i].radius, 0, 2 * Math.PI, false);
+    ctx.fill();
+  }
+
+  /**
+   * Animates particles
+   * @param  {array} particle value from createCircle & draw methods
+   * @method animate
+   */
+  Particles.prototype.animate = function(particle){
+    var self = this,
+            ctx = self.ctx;
+
+    setInterval(function(){
+      //clears canvas
+      self.clearCanvas();
+      //then redraws particles in new positions based on velocity
+      for (var i = 0; i < self.numParticles; i++) {
+        particle[i].xPos += particle[i].xVelocity;
+        particle[i].yPos -= particle[i].yVelocity;
+
+        //if particle goes off screen call reset method to place it offscreen to the left/bottom
+        if (particle[i].xPos > self.canvas.width + particle[i].radius || particle[i].yPos > self.canvas.height + particle[i].radius) {
+          self.resetParticle(particle, i);
+        } else {
+          self.draw(particle, i);
         }
+      }
+    }, 1000/self.fps);
+  }
+
+  /**
+   * Resets position of particle when it goes off screen
+   * @param  {array} particle value from createCircle & draw methods
+   * @param  {number} i value from createCircle method
+   * @method resetParticle
+   */
+  Particles.prototype.resetParticle = function(particle, i){
+    var self = this;
+
+    var random = self._rand(0, 1);
+
+    if (random > .5) {
+      // 50% chance particle comes from left side of window...
+      particle[i].xPos = -particle[i].radius;
+      particle[i].yPos = self._rand(0, self.canvas.height);
+    } else {
+      //... or bottom of window
+      particle[i].xPos = self._rand(0, self.canvas.width);
+      particle[i].yPos = self.canvas.height + particle[i].radius;
     }
+    //redraw particle with new values
+    self.draw(particle, i);
+  }
 
-    function addTriangle(delay) {
-        setTimeout(function() {
-            var t = new Triangle();
-            triangles.push(t);
-            tweenTriangle(t);
-        }, delay);
-    }
+  /**
+   * Clears canvas between animation frames
+   * @method clearCanvas
+   */
+  Particles.prototype.clearCanvas = function(){
+    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+  }
 
-    function initAnimation() {
-        animate();
-    }
 
-    function tweenTriangle(tri) {
-        var t = Math.random()*(2*Math.PI);
-        var x = (400+Math.random()*200)*Math.cos(t) + width*0.5;
-        var y = (400+Math.random()*200)*Math.sin(t) + height*0.5-20;
-        var time = 10+5*Math.random();
-
-        TweenLite.to(tri.pos, time, {x: x,
-            y: y, ease:Circ.easeOut,
-            onComplete: function() {
-                tri.init();
-                tweenTriangle(tri);
-        }});
-    }
-
-    // Event handling
-    function addListeners() {
-        window.addEventListener('scroll', scrollCheck);
-        window.addEventListener('resize', resize);
-    }
-
-    function scrollCheck() {
-        if(document.body.scrollTop > height) animateHeader = false;
-        else animateHeader = true;
-    }
-
-    function resize() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        largeHeader.style.minHeight = height+'px';
-        canvas.width = width;
-        canvas.height = height;
-    }
-
-    function animate() {
-        if(animateHeader) {
-            ctx.clearRect(0,0,width,height);
-            for(var i in triangles) {
-                triangles[i].draw();
-            }
-        }
-        requestAnimationFrame(animate);
-    }
-
-    // Canvas manipulation
-    function Triangle() {
-        var _this = this;
-
-        // constructor
-        (function() {
-            _this.coords = [{},{},{}];
-            _this.pos = {};
-            init();
-        })();
-
-        function init() {
-            _this.alpha = 0.5;
-            _this.pos.x = width*0.5;
-            _this.pos.y = height*0.5-20;
-            _this.coords[0].x = -10+Math.random()*40;
-            _this.coords[0].y = -10+Math.random()*40;
-            _this.coords[1].x = -10+Math.random()*40;
-            _this.coords[1].y = -10+Math.random()*40;
-            _this.coords[2].x = -10+Math.random()*40;
-            _this.coords[2].y = -10+Math.random()*40;
-            _this.scale = 0.1+Math.random()*0.3;
-            _this.color = colors[Math.floor(Math.random()*colors.length)];
-        }
-
-        this.draw = function() {
-            if(_this.alpha >= 0.005) _this.alpha -= 0.001;
-            else _this.alpha = 0;
-            ctx.beginPath();
-            ctx.moveTo(_this.coords[0].x+_this.pos.x, _this.coords[0].y+_this.pos.y);
-            ctx.lineTo(_this.coords[1].x+_this.pos.x, _this.coords[1].y+_this.pos.y);
-            ctx.lineTo(_this.coords[2].x+_this.pos.x, _this.coords[2].y+_this.pos.y);
-            ctx.closePath();
-            ctx.fillStyle = 'rgba('+_this.color+','+ _this.alpha+')';
-            ctx.fill();
-        };
-
-        this.init = init;
-    }
-
+  // go go go!
+  var particle = new Particles().init();
 })();
 });

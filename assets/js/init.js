@@ -286,7 +286,7 @@ jQuery( document ).ready(function( $ ) {
 	/** Placeholder JS call **/
 	$('input[type=text], textarea').placeholder();
 	/******* triangle effect *******/
-	$("body").append('<div class="animate-canvas"><canvas id="demo-canvas"></canvas></div>');
+	$("body").append('<div class="animate-canvas"><canvas id="overlay-canvas"></canvas></div>');
 	/******* triangle effect *******/
 
 });
