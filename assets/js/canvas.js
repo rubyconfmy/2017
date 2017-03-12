@@ -195,10 +195,13 @@ jQuery(window).load(function() {
   }
 
 
-  // go go go!
-  setTimeout(function(){
-    var particle = new Particles().init();
-  }, 500)
+  var unsupported_devise = (/android|webos|iphone|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent.toLowerCase()));
+  if (!unsupported_devise) {
+    // go go go!
+    setTimeout(function(){
+      var particle = new Particles().init();
+    }, 500)
+  }
 
 })();
 });
