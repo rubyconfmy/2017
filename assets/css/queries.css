@@ -180,7 +180,7 @@ body {
 {
 	width:100%;
 }
-#example-navbar-collapse {
+#navbar-collapse {
 float: none;
 }
 .header.header-hide {
@@ -248,7 +248,7 @@ display:none;
 
 @media screen and (max-width: 800px) {
 
-#example-navbar-collapse{
+#navbar-collapse{
 	float:none;
 }
 
