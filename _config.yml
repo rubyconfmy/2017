@@ -12,7 +12,7 @@ speakers:
     image: akira.png
 
   - name: Aja Hammerly
-    description: An awesome dinosaur that codes Ruby and does DevOps. <a href="https://twitter.com/the_thagomizer" target="_blank">@the_thagomizer</a>'s a Google Cloud Advocate @ Google.
+    description: An awesome dinosaur that codes in Ruby and does DevOps. <a href="https://twitter.com/the_thagomizer" target="_blank">@the_thagomizer</a>'s a Google Cloud Advocate @ Google.
     image: aja.png
 
   - name: Tim Riley
