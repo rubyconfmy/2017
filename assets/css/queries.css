@@ -184,7 +184,7 @@ body {
 float: none;
 }
 .header.header-hide {
-	background: none repeat scroll 0 0 transparent;
+	background: none repeat scroll 0 0 #0f1726;
 }
 .navbar-header {
 	float: none;
@@ -253,7 +253,7 @@ display:none;
 }
 
 .header.header-hide {
-    background: none repeat scroll 0 0 transparent;
+    background: none repeat scroll 0 0 #0f1726;
 }
 
 /* Schedule social links */
@@ -630,4 +630,10 @@ h1.arrow{
 	padding: 25px 0 0 0;
 }
 
+}
+
+@media screen and (max-width:620px){
+  #location .fa-map-marker {
+    display: none;
+  }
 }
