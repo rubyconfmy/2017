@@ -142,8 +142,18 @@ html{
 }
 
 /****************************/
-/** Preloader **/
+/** Layout **/
 /****************************/
+body.page {
+  padding-top: 100px;
+}
+
+/****************************/
+
+/** Preloader **/
+
+/****************************/
+
 
 .preloader {
   background: none repeat scroll 0 0 #101012;
@@ -348,7 +358,7 @@ canvas{
   background: none repeat scroll 0 0 #0f1726;
 }
 
-.header {
+.header {  top: 0;
   width: 100%;
   position: fixed;
   z-index: 3;
