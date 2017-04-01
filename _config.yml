@@ -4,21 +4,21 @@ gems:
 
 speakers:
   - name: Aaron Patterson
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.
-    image: team1.jpg
+    description: A Ruby & Rails core team. Aaron's the most <a href="https://twitter.com/tenderlove" target="_blank">@tenderlove</a>-ing person you'll ever meet. He works at Github.
+    image: aaron.png
 
   - name: Akira Matsuda
-    description: Lorem ipsum dolor sit amet, .
-    image: team1.jpg
+    description: CRuby core team. <a href="https://twitter.com/amatsuda" target="_blank">@amatsuda</a>'s also the founder of Asakusa.rb, one of the most active regional Rubyist group in Japan.
+    image: akira.png
 
   - name: Aja Hammerly
-    description: Lorem.
-    image: team1.jpg
+    description: An awesome dinosaur that codes Ruby and does DevOps. <a href="https://twitter.com/the_thagomizer" target="_blank">@the_thagomizer</a>'s a Google Cloud Advocate @ Google.
+    image: aja.png
 
   - name: Tim Riley
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.
-    image: team1.jpg
+    description: <a href="https://twitter.com/timriley" target="_blank">@timriley</a>'s a director & developer at @icelab. He's also one of dry-rb's core developer.
+    image: tim.png
 
   - name: Allison McMillan
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.
-    image: team1.jpg
+    description: Software Developer at Collective Idea. <a href="https://twitter.com/allie_p" target="_blank">@allie_p</a> started developing at a RailsGirls workshop and now organizes the Washington, DC chapter.
+    image: allison.png
