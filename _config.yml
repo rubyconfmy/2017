@@ -4,7 +4,7 @@ gems:
 
 speakers:
   - name: Aaron Patterson
-    description: A Ruby & Rails core team. Aaron's the most <a href="https://twitter.com/tenderlove" target="_blank">@tenderlove</a>-ing person you'll ever meet. He works at Github.
+    description: Ruby & Rails core team member. Aaron's the most <a href="https://twitter.com/tenderlove" target="_blank">@tenderlove</a>-ing person you'll ever meet. He works at Github.
     image: aaron.png
 
   - name: Akira Matsuda
