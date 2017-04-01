@@ -40,7 +40,6 @@ body {
   font-size: 14px;
   font-style: normal;
   line-height:1.5;
-  overflow:hidden;
 
 }
 
@@ -108,9 +107,6 @@ p {
   font-size: 1.1em;
   line-height: 1.6em;
 }
-html{
-  overflow:hidden;
-}
 .bottom-spacing{
   margin-bottom:2.5%;
 }
@@ -141,12 +137,30 @@ html{
   vertical-align: middle;
 }
 
-/****************************/
-/** Layout **/
-/****************************/
+/****************************/
+
+/** Layout **/
+
+/****************************/
+
 body.page {
   padding-top: 100px;
 }
+
+body.page p {
+  font-size: 1.3em;
+  line-height: 1.6em;
+  margin-bottom: 20px;
+}
+
+body.page p a, body.page p span.highlight {
+  color: #fb1b35;
+}
+
+body.page ul {
+  font-size: 1.3em;
+}
+
 
 /****************************/
 
@@ -213,6 +227,14 @@ hr {
   margin-top:0px;
   margin-bottom:15px;
 }
+
+/****************************/
+
+/** Global **/
+
+/****************************/
+
+
 
 /****************************/
 /** Home page **/
