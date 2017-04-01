@@ -8,7 +8,7 @@ speakers:
     image: aaron.png
 
   - name: Akira Matsuda
-    description: CRuby core team. <a href="https://twitter.com/amatsuda" target="_blank">@amatsuda</a>'s also the founder of Asakusa.rb, one of the most active regional Rubyist group in Japan.
+    description: CRuby core team. <a href="https://twitter.com/amatsuda" target="_blank">@amatsuda</a>'s also the founder of Asakusa.rb, one of the most active regional Rubyist group in Tokyo, Japan.
     image: akira.png
 
   - name: Aja Hammerly

@@ -3,13 +3,14 @@
 
 {% include head.html %}
 
-<body id="top" data-spy="scroll" data-target=".header" data-offset="80">
+<body class="page">
   {% include google-analytics.html %}
+
+  {% include header.html %}
 
   {{ content }}
 
   {% include footer.html %}
   {% include footer-scripts.html %}
-  {% include homepage-footer-scripts.html %}
 </body>
 </html>

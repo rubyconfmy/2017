@@ -37,7 +37,7 @@ jQuery(window).load(function() {
 jQuery( document ).ready(function( $ ) {
 	$.noConflict();
 
-	/*** Auto height function ***/
+  /*** Auto height function ***/
 	var setElementHeight = function () {
 		var height = $(window).height();
 		$('.autoheight').css('min-height', (height));
@@ -193,7 +193,7 @@ jQuery( document ).ready(function( $ ) {
 	}
 	);
 
-	wow.init();
+	// wow.init();
 
 
 
