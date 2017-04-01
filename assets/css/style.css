@@ -157,7 +157,7 @@ body.page p a, body.page p span.highlight {
   color: #fb1b35;
 }
 
-body.page ul {
+body.page section .container ul {
   font-size: 1.3em;
 }
 
