@@ -1,0 +1,45 @@
+<!--SPEAKERS-->
+<section class="speakers text-center section-padding" id="speakers">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 wow animated fadeInUp align-center" data-wow-duration="1s" data-wow-delay="1s">
+      <h1 class="arrow">Speakers</h1><hr>
+      <p>Meet our awesome speakers. <a href="./call-for-proposals">Get in touch</a> if you're interested to speak.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="speakers-wrap">
+        <div id="portfolioSlider">
+          <ul class="slides">
+            <li>
+              {% for speaker in site.speakers %}
+                {% assign delay = 0.2 | times: forloop.index | plus: 0.3 %}
+                <div class="col-md-4 col-sm-4 wow animated fadeInUp speaker" data-wow-duration="1s" data-wow-delay="{{ delay }}s">
+                  <div class="overlay-effect effects clearfix">
+                    <div class="img">
+                      <img src="assets/img/speakers/{{ speaker.image }}" alt="Portfolio Item">
+                    </div>
+                  </div>
+                  <h2>{{ speaker.name }}</h2>
+                  <div class="description-wrap">
+                    <p>{{ speaker.description }}</p>
+                  </div>
+                </div>
+              {% endfor %}
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!--Row Ends Here-->
+    <br /><br />
+    <div class="row">
+      <div class="col-lg-8 wow animated fadeInUp align-center" data-wow-duration="1s" data-wow-delay="0.5s">
+        <div class="nl-submit-wrap">
+          <button class="nl-submit btn-effect" onclick="window.open('./call-for-proposals', '_self')">Call For Proposals</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

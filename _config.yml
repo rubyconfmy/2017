@@ -1,0 +1,24 @@
+gems:
+  - jekyll-sitemap
+
+
+speakers:
+  - name: Aaron Patterson
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.
+    image: team1.jpg
+
+  - name: Akira Matsuda
+    description: Lorem ipsum dolor sit amet, .
+    image: team1.jpg
+
+  - name: Aja Hammerly
+    description: Lorem.
+    image: team1.jpg
+
+  - name: Tim Riley
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.
+    image: team1.jpg
+
+  - name: Allison McMillan
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.
+    image: team1.jpg

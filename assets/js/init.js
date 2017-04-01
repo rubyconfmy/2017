@@ -289,4 +289,9 @@ jQuery( document ).ready(function( $ ) {
 	$("body").append('<div class="animate-canvas"><canvas id="overlay-canvas"></canvas></div>');
 	/******* triangle effect *******/
 
+  // Google map
+  if ( typeof google != 'undefined') initGoogleMap();
+
+  jQuery(window).resize();
+  jQuery(window).scroll();
 });
