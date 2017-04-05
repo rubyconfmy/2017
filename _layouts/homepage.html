@@ -2,16 +2,17 @@
 <html>
 
 {% include head.html %}
-<style type="text/css">
-  body, html { overflow:hidden; }
-</style>
+
 <body id="top" data-spy="scroll" data-target=".header" data-offset="80">
+  <style type="text/css">
+    body, html { overflow:hidden; }
+  </style>
+  
   {% include google-analytics.html %}
 
   {{ content }}
 
   {% include footer.html %}
-  {% include footer-scripts.html %}
   {% include homepage-footer-scripts.html %}
 </body>
 </html>

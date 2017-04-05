@@ -2182,13 +2182,14 @@ ul.footer-links {
   padding-right:10px;
 }
 
-ul.footer-links li {
-  display: inline-block;
+ul.footer-links li {  display: inline-block;
+
 }
 
 ul.footer-links li::after {
   content: " |";
-  margin-right:10px;
+  margin-right:10px;  margin-left:10px;
+
 }
 
 ul.footer-links li:last-child::after {

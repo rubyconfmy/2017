@@ -1,0 +1,92 @@
+---
+layout: page
+title: Slack Invite
+desc: Invite yourself to our Slack Channel
+image: http://rubyconf.my/2016/assets/img/logo.png
+---
+
+<section class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 align-left">
+        <p>
+          Good news everyone! We're on <i class="fa fa-slack"></i>Slack @ <a href="https://rubymy.slack.com">https://rubymy.slack.com</a>
+        </p>
+        <p>
+          <strong>Invite yourself to our Slack group now!</strong>
+        </p>
+        <p>
+          <form id="slack_invite" action="">
+            <fieldset class="form-group">
+              <label for="email_invite">Email:</label>
+              <input type="email" class="form-control" name="email_invite" id="email_invite" placeholder="please@invite.me">
+            </fieldset>
+
+            <button id="submit_button" type="submit" class="btn btn-primary"><span>Invite Me !!</span></button>
+            <i class="fa fa-spinner fa-spin hidden"></i>
+            <span id="error_notice"></span>
+            <span id="status_notice"></span>
+          </form>
+        </p>
+
+        <br />
+        <small class="text-alt">Want to know how this is made? Check out the source at <a href="https://github.com/klxrb/slack-invite">https://github.com/klxrb/slack-invite</a></small>
+
+        <script>
+        jQuery(function($){
+          $('#slack_invite').submit(function(e){
+            function disable_submit(){
+              $('#submit_button').prop('disabled',true).addClass('disabled');
+              $('#submit_button span').html('Inviting ...');
+              $('#submit_button + i').removeClass('hidden');
+            }
+
+            function restore_submit(){
+              $('#submit_button').prop('disabled',false).removeClass('disabled');
+              $('#submit_button span').html('Invite Me !!');
+              $('#submit_button + i').addClass('hidden');
+            }
+
+            error = false;
+
+            $('#status_notice, #error_notice').html('');
+
+            disable_submit();
+
+            if(!$('#email_invite').val().trim()){
+              $('#error_notice').html('Please enter a valid email.')
+              restore_submit();
+              error = true
+            }
+
+            if(!error){
+              $.ajax({
+                url: 'https://rubymy-slack-invite.herokuapp.com/invite.json',
+                dataType: 'jsonp',
+                data: {
+                  email: $('#email_invite').val()
+                },
+                success: function(data){
+                  if(data.ok){
+                    $('#error_notice').html('');
+                    $('#status_notice').html('Invitation Email Sent :)');
+                  }else{
+                    $('#error_notice').html('Error: ' + data.error.replace(/_/g, ' ') + '.');
+                    $('#status_notice').html('');
+                  }
+                },
+                complete: function(data){
+                  restore_submit();
+                }
+              })
+            }
+
+            return false;
+          })
+        })
+        </script>
+
+      </div>
+    </div>
+  </div>
+</section>
