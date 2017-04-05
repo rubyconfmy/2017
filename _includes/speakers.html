@@ -10,26 +10,24 @@
 
     <div class="row">
       <div class="speakers-wrap">
-        <div id="portfolioSlider">
-          <ul class="slides">
-            <li>
-              {% for speaker in site.speakers %}
-                {% assign delay = 0.2 | times: forloop.index | plus: 0.3 %}
-                <div class="col-md-4 col-sm-4 wow animated fadeInUp speaker" data-wow-duration="1s" data-wow-delay="{{ delay }}s">
-                  <div class="overlay-effect effects clearfix">
-                    <div class="img">
-                      <img src="/assets/img/speakers/{{ speaker.image }}" alt="Portfolio Item">
-                    </div>
-                  </div>
-                  <h2>{{ speaker.name }}</h2>
-                  <div class="description-wrap">
-                    <p>{{ speaker.description }}</p>
+        <ul class="slides">
+          <li>
+            {% for speaker in site.speakers %}
+              {% assign delay = 0.2 | times: forloop.index | plus: 0.3 %}
+              <div class="col-md-4 col-sm-4 wow animated fadeInUp speaker" data-wow-duration="1s" data-wow-delay="{{ delay }}s">
+                <div class="overlay-effect effects clearfix">
+                  <div class="img">
+                    <img src="/assets/img/speakers/{{ speaker.image }}" alt="Portfolio Item" width="370" height="255">
                   </div>
                 </div>
-              {% endfor %}
-            </li>
-          </ul>
-        </div>
+                <h2>{{ speaker.name }}</h2>
+                <div class="description-wrap">
+                  <p>{{ speaker.description }}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </li>
+        </ul>
       </div>
     </div> <!--Row Ends Here-->
     <br /><br />
