@@ -22,3 +22,7 @@ speakers:
   - name: Allison McMillan
     description: Software Developer at Collective Idea. <a href="https://twitter.com/allie_p" target="_blank">@allie_p</a> started developing at a RailsGirls workshop and now organizes the Washington, DC chapter.
     image: allison.png
+
+  - name: Saron Yitbarek
+    description: <a href="https://twitter.com/saronyitbarek" target="_blank">@saronyitbarek</a>'s the founder of CodeNewbie.org, a really supportive community of people learning to code. They produce some really cool weekly podcasts. She also co-hosts @rubybookclub.
+    image: saron.jpg
