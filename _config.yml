@@ -26,3 +26,7 @@ speakers:
   - name: Saron Yitbarek
     description: <a href="https://twitter.com/saronyitbarek" target="_blank">@saronyitbarek</a>'s the founder of CodeNewbie.org, a really supportive community of people learning to code. They produce some cool podcasts weekly. She also co-hosts @rubybookclub.
     image: saron.jpg
+
+  - name: Konstantin Haase
+    description: Founder and CTO of Travis CI, <a href="https://twitter.com/konstantinhaase" target="_blank">@konstantinhaase</a>'s a one of a kind speaker that often blows our minds with his presentations. He's also the main contributor of Sinatra.
+    image: konstantin.jpg
