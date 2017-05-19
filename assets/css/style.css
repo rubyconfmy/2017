@@ -1693,6 +1693,9 @@ ul.slides li {
 .sponsor {
   margin-top: 60px;
 }
+.sponsors-wrap h2 {
+  font-weight: bold;
+}
 
 #slider1_container{
   margin:0 auto;
