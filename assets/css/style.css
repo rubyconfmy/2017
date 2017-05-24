@@ -1697,6 +1697,10 @@ ul.slides li {
   font-weight: bold;
 }
 
+img.sponsor {
+  margin: 0 20px;
+}
+
 #slider1_container{
   margin:0 auto;
   position: relative;
