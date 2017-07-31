@@ -636,8 +636,7 @@ figure.vimeo-video{
   right: 10px;
   top: 10px;
 }
-.speakers {
-  background-color: #212739;
+.speakers {  background-color: #212739;
 
 }.speakers .description-wrap {
   height: 130px;
@@ -1939,13 +1938,14 @@ ul.planContainer {
 
 .code-of-conduct-wrap {
   position: relative;
+  background: #212739;
 }
 
 .code-of-conduct-wrap h1 {
-  color: #000;
+  color: #ffffff;
 }
 
-#code-of-conduct p {  color: #000;  margin-bottom: 20px;
+#code-of-conduct p {  color: #ffffff;  margin-bottom: 20px;
 }
 
 #code-of-conduct p a {
