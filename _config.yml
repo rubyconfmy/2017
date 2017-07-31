@@ -26,3 +26,43 @@ speakers:
   - name: Konstantin Haase
     description: Founder and CTO of Travis CI, <a href="https://twitter.com/konstantinhaase" target="_blank">@konstantinhaase</a>'s a one of a kind speaker that often blows our minds with his presentations. He's also the main contributor of Sinatra.
     image: konstantin.jpg
+
+  - name: Tan Jun Qi
+    description: <a href="https://github.com/tjjjwxzq" target="_blank">Jun Qi</a>'s just graduating from Singapore University of Technology Design but don't let age fool you, she has a very unique way of surprising you with her ideas. She enjoys teaching and coaches at the Techladies bootcamps.
+    image: junqi.jpg
+
+  - name: Michael Cheng
+    description: Being a developer for more than 10 years <a href="https://github.com/miccheng" target="_blank">Michael</a> has seen it all. He runs Engineers.SG and has been a huge contributor to the tech ecosystem in Singapore.
+    image: michael.jpg
+
+  - name: Dilum Navanjana
+    description: <a href="https://github.com/dilumn" target="_blank">Dilum</a> a core team member of <a href="https://github.com/celluloid" target="_blank">Celluloid</a> and works as a Senior Software Engineer in Sri Lanka.
+    image: dilum.jpg
+
+  - name: Vladimir Dementyev
+    description: A mathematician that found his happiness in programming Ruby and Erlang, <a href="https://github.com/palkan" target="_blank">Vladimir</a> enjoys contributing to open source, teaching Ruby and Rails and being an <a href="https://evilmartians.com/" target="_blank">Evil Martian</a>.
+    image: vlad.jpg
+
+  - name: Sebastián Sogamoso
+    description: <a href="https://github.com/sebasoga" target="_blank">Sebastián</a> likes nachos, pair programming and teaching. He codes mostly in Ruby, works at Cookpad and organizes RubyConf Colombia.
+    image: sebasoga.jpg
+
+  - name: Alex Topalov
+    description: Ruby engineer and high load project consultant since 2009. <a href="https://github.com/sharkzp" target="_blank">Alex</a>'s a believer of DDD and good architecture.
+    image: alex.jpg
+
+  - name: Elisha Tan
+    description: Entrepreneur, developer, community leader, and many more; <a href="https://twitter.com/elishatan" target="_blank">Elisha</a> believes that entrepreneurs have the ability (hence responsibility) to make the world a better place, and a way to do that is through technology. She's also the founder of TechLadies, who have taught over 300 ladies how to code in Singapore and Malaysia.
+    image: elisha.jpg
+
+  - name: Kyle Dolezal
+    description: Having a background as a researcher, <a href="http://github.com/KyleDolezal" target="_blank">Kyle</a> loved teaching himself computer programming skills so much that I decided to write code full-time. He's currently a backend developer at Piktochart.
+    image: kyle.jpg
+
+  - name: Jinny Wong
+    description: Engineering Manager at Carousell, <a href="http://github.com/shujin" target="_blank">Jinny</a> provides strategic and technical guidance to the engineering team. When she is not serious at work, Jinny owns two cats with her husband. She also enjoys music, photography and running.
+    image: jinny.png
+
+  - name: Sylvia Choong & Jany Mai
+    description: <a href="https://github.com/mymai91" target="_blank">Jany</a> is from Vietnam, she holds a Bachelor in Information Technology and was an active organizer in Vietnamese Ruby community. <a href="https://github.com/SylviaChoong" target="_blank">Sylvia</a> is a local Malaysian, she holds a Multimedia Design Diploma and a MCP status from Microsoft. Both are experienced Ruby on Rails developer working in a FinTech company, Loanstreet Sdn. Bhd. They aspire to make the web a better place.
+    image: sylvia_jany.jpg
