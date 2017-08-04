@@ -27,7 +27,7 @@ jQuery(window).load(function() {
     this.minSpeed = .05;
     this.maxSpeed = .4;
     //frames per second
-    this.fps = 60;
+    this.fps = 20;
     //number of particles
     this.numParticles = 50;
     //required canvas variables
