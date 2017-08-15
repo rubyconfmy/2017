@@ -66,3 +66,11 @@ speakers:
   - name: Sylvia Choong & Jany Mai
     description: <a href="https://github.com/mymai91" target="_blank">Jany</a> is from Vietnam, she holds a Bachelor in Information Technology and was an active organizer in Vietnamese Ruby community. <a href="https://github.com/SylviaChoong" target="_blank">Sylvia</a> is a local Malaysian, she holds a Multimedia Design Diploma and a MCP status from Microsoft. Both are experienced Ruby on Rails developer working in a FinTech company, Loanstreet Sdn. Bhd. They aspire to make the web a better place.
     image: sylvia_jany.jpg
+
+  - name: Daniel Baark
+    description: <a href="https://github.com/db579" target="_blank">A developer</a> at ZappiStore, Daniel automates market research with a heavy focus on data analysis.
+    image: daniel.jpg
+
+  - name: Gabrielle Ong Hui Min
+    description: <a href="https://twitter.com/hellogabbo" target="_blank">Gabrielle</a> is a junior software engineer at TradeGecko. She took a leap of faith to code full-time before university and has loved it ever since. She hopes to inspire others to challenge the norm and believe in their dreams.
+    image: gabrielle.jpg
