@@ -1,0 +1,28 @@
+<script>
+var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+    sURLVariables = sPageURL.split('&'),
+    sParameterName,
+    i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+    sParameterName = sURLVariables[i].split('=');
+
+    if (sParameterName[0] === sParam) {
+      return sParameterName[1] === undefined ? true : sParameterName[1];
+    }
+  }
+};
+
+var discount_code = getUrlParameter('discount_code');
+if(discount_code != undefined) {
+  Cookies.set('discount_code', discount_code);
+}
+
+jQuery(function(){
+  if(Cookies.get('discount_code') != undefined) {
+    var href = $('.registration-link').attr('href');
+    $('.registration-link').attr('href', href + "?discount_code=" + Cookies.get('discount_code'));
+  }
+})
+</script>
