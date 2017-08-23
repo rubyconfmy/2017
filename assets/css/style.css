@@ -958,7 +958,6 @@ div.avatar {
 }
 
 .accordion .item .heading .e-title {
-  background: url("../img/arrow.png") no-repeat scroll right 0 top -80px rgba(0, 0, 0, 0);
   border-top: 1px solid rgba(33, 39, 57, 0.15);
   box-sizing: border-box;
   color: #212739;
