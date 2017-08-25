@@ -43,6 +43,10 @@ speakers:
     description: A mathematician that found his happiness in programming Ruby and Erlang, <a href="https://github.com/palkan" target="_blank">Vladimir</a> enjoys contributing to open source, teaching Ruby and Rails and being an <a href="https://evilmartians.com/" target="_blank">Evil Martian</a>.
     image: vlad.jpg
 
+  - name: Charlotte Chang
+    description: <a href="https://twitter.com/pushorpull/" target="_blank">Charlotte</a> is a system scientist and tech enthusiast who loves dogs. An organizational design coach by day, she is multi-disciplined in full stack Rails development, web-based UX, and hardware-software integrated product management. Whether it be coding or coaching, Charlotte enjoys a quality high five.
+    image: charlotte.jpg
+
   - name: Sebastián Sogamoso
     description: <a href="https://github.com/sebasoga" target="_blank">Sebastián</a> likes nachos, pair programming and teaching. He codes mostly in Ruby, works at Cookpad and organizes RubyConf Colombia.
     image: sebasoga.jpg
@@ -74,3 +78,15 @@ speakers:
   - name: Gabrielle Ong Hui Min
     description: <a href="https://twitter.com/hellogabbo" target="_blank">Gabrielle</a> is a junior software engineer at TradeGecko. She took a leap of faith to code full-time before university and has loved it ever since. She hopes to inspire others to challenge the norm and believe in their dreams.
     image: gabrielle.jpg
+
+  - name: Kevin Litchfield
+    description: <a href="http://kevinlitchfield.com/" target="_blank">Kevin</a> is a software engineer living in New York City. The Internet excites him most as a meeting place for likeminded people, as a platform for teaching and learning, and as an infinite rainbow of tantalizing food.
+    image: kevin.png
+
+  - name: Ilake Chang
+    description: Senior Rails developer at 5xruby & Shopmatic, <a href="https://mylake.github.io/" target="_blank">Ilake</a> is also a Rails contributor.
+    image: ilake.jpg
+
+  - name: Nick Marden
+    description: <a href="https://github.com/nickmarden">Nick</a> has been working at Internet startups since the early 1990's, including a long stretch in Silicon Valley and San Francisco during and after the dot-com boom. He loves using Ruby, Linux, and all sorts of other tools to tackle hard problems. He is the founder of Rapid River Software, a US- and Malaysia-based software development consultancy.
+    image: nick.jpg

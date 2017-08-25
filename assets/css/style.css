@@ -915,6 +915,18 @@ div.avatar {
 /** Schedule **/
 /********************************/
 
+#schedule .avatar {
+  width: 50px;
+  float: left;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 25px;
+  border: 2px solid #e2e2e2;
+  margin-right: 10px;
+  background-position: center;
+  background-size: cover;
+}
+
 .name {
   text-transform: none;
   font-weight: 500;
