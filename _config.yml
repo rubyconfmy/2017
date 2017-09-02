@@ -23,10 +23,6 @@ speakers:
     description: <a href="https://twitter.com/saronyitbarek" target="_blank">@saronyitbarek</a>'s the founder of CodeNewbie.org, a really supportive community of people learning to code. They produce some cool podcasts weekly. She also co-hosts @rubybookclub.
     image: saron.jpg
 
-  - name: Konstantin Haase
-    description: Founder and CTO of Travis CI, <a href="https://twitter.com/konstantinhaase" target="_blank">@konstantinhaase</a>'s a one of a kind speaker that often blows our minds with his presentations. He's also the main contributor of Sinatra.
-    image: konstantin.jpg
-
   - name: Tan Jun Qi
     description: <a href="https://github.com/tjjjwxzq" target="_blank">Jun Qi</a>'s just graduating from Singapore University of Technology Design but don't let age fool you, she has a very unique way of surprising you with her ideas. She enjoys teaching and coaches at the Techladies bootcamps.
     image: junqi.jpg
@@ -90,3 +86,11 @@ speakers:
   - name: Nick Marden
     description: <a href="https://github.com/nickmarden">Nick</a> has been working at Internet startups since the early 1990's, including a long stretch in Silicon Valley and San Francisco during and after the dot-com boom. He loves using Ruby, Linux, and all sorts of other tools to tackle hard problems. He is the founder of Rapid River Software, a US- and Malaysia-based software development consultancy.
     image: nick.jpg
+
+  - name: Anton Lvov
+    description: <a href="https://github.com/denied404">Anton</a> is an automation enthusiast who got through bloody enterprise and still alive. Armchair guitar player, father and son.
+    image: anton.png
+
+  - name: Gooi Liang Zheng
+    description: Java and Python developer by day, Ruby programmer by night. <a href="http://github.com/samgooi4189">Gooi</a> likes to volunteer to cultivate healthier tech community and growing local talents.
+    image: gooi.jpg
