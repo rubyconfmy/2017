@@ -43,10 +43,6 @@ speakers:
     description: <a href="https://twitter.com/pushorpull/" target="_blank">Charlotte</a> is a system scientist and tech enthusiast who loves dogs. An organizational design coach by day, she is multi-disciplined in full stack Rails development, web-based UX, and hardware-software integrated product management. Whether it be coding or coaching, Charlotte enjoys a quality high five.
     image: charlotte.jpg
 
-  - name: Sebastián Sogamoso
-    description: <a href="https://github.com/sebasoga" target="_blank">Sebastián</a> likes nachos, pair programming and teaching. He codes mostly in Ruby, works at Cookpad and organizes RubyConf Colombia.
-    image: sebasoga.jpg
-
   - name: Alex Topalov
     description: Ruby engineer and high load project consultant since 2009. <a href="https://github.com/sharkzp" target="_blank">Alex</a>'s a believer of DDD and good architecture.
     image: alex.jpg
