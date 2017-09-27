@@ -39,10 +39,6 @@ speakers:
     description: A mathematician that found his happiness in programming Ruby and Erlang, <a href="https://github.com/palkan" target="_blank">Vladimir</a> enjoys contributing to open source, teaching Ruby and Rails and being an <a href="https://evilmartians.com/" target="_blank">Evil Martian</a>.
     image: vlad.jpg
 
-  - name: Charlotte Chang
-    description: <a href="https://twitter.com/pushorpull/" target="_blank">Charlotte</a> is a system scientist and tech enthusiast who loves dogs. An organizational design coach by day, she is multi-disciplined in full stack Rails development, web-based UX, and hardware-software integrated product management. Whether it be coding or coaching, Charlotte enjoys a quality high five.
-    image: charlotte.jpg
-
   - name: Alex Topalov
     description: Ruby engineer and high load project consultant since 2009. <a href="https://github.com/sharkzp" target="_blank">Alex</a>'s a believer of DDD and good architecture.
     image: alex.jpg
