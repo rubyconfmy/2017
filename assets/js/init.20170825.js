@@ -33,7 +33,6 @@
 jQuery(document).ready(function( $ ) {
 	jQuery(".status").fadeOut();
 	jQuery(".preloader").delay(100).fadeOut("slow");
-	jQuery("body").css('overflow-y','visible');
 });
 
 /*************************************/
