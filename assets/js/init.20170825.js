@@ -64,7 +64,7 @@ jQuery( document ).ready(function( $ ) {
 		speed: 1000,
 		easing: 'easeInOutCubic',
 		offset: height,
-		updateURL: false,
+		updateURL: true,
 		callbackBefore: function ( toggle, anchor ) {},
 		callbackAfter: function ( toggle, anchor ) {},
 	});
@@ -286,7 +286,7 @@ jQuery( document ).ready(function( $ ) {
 	});
 
 	/******* Nice Scroll *******/
-	$("html").niceScroll();
+	// $("html").niceScroll();
 
 	/** Placeholder JS call **/
 	$('input[type=text], textarea').placeholder();
