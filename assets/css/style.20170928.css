@@ -72,6 +72,20 @@ a:focus {
   outline: none;
 }
 
+.slack-invite a:hover {
+  color: #ff0000;
+  text-decoration: none;
+}
+
+
+.slack-invite a:focus {
+  color: #ff0000;
+  text-decoration: none;
+  outline: none;
+}
+
+
+
 h1 {
   font-size: 2em;
   color: #FFFFFF;
